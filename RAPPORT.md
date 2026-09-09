@@ -1,7 +1,7 @@
 # Konverteringsrapport
 
-**Demo** · prototyp v2 · nivå: Aggressiv
-Genererad 9 Sep 2026, 13:40 av Prototyp-feedback.
+**Demo** · prototyp v3 · nivå: Aggressiv
+Genererad 9 Sep 2026, 14:30 av Prototyp-feedback.
 
 Det här är en **startpunkt**, inte färdig arkitektur. Läs igenom vad som gissades nedan.
 
@@ -46,6 +46,7 @@ Innehållet ligger som en array i frontmatter – ändra texten där i stället 
 
 - Inbäddade `<style>` har fått `is:global` eftersom reglerna gällde hela sidan i prototypen. Utan det scopar Astro dem till komponenten.
 - CSS behålls global – inga scoped styles per komponent. Kaskaden i en prototyp går sönder av scoping, så det är ett medvetet val.
+- Med i exporten: en GitHub Actions-workflow som publicerar sajten på GitHub Pages vid varje push till main.
 
 ## Kända begränsningar
 
