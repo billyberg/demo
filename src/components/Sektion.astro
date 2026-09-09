@@ -1,13 +1,12 @@
 ---
-const rutor = [
-  { rubrik: "Design", text: "Gränssnitt som är enkla att använda och lätta att bygga vidare på." },
-  { rubrik: "Utveckling", text: "Snabba, tillgängliga sajter utan onödiga lager av teknik." },
-  { rubrik: "Förvaltning", text: "Vi finns kvar efter lansering och håller sajten vid liv." },
-];
+import { hamtaSida, hamtaLista } from '../lib/sanity';
+
+const sida = await hamtaSida("sidaStart");
+const services = await hamtaLista("services");
 ---
 
 <section class="sektion"><h2>Det här gör vi bäst</h2><p>Tre saker, ordentligt gjorda, i stället för tio halvfärdiga.</p><div class="rutor">
-  {rutor.map((post) => (
+  {services.map((post) => (
     <div class="ruta"><h3>{post.rubrik}</h3><p>{post.text}</p></div>
   ))}
 </div><div class="bild"></div></section>

@@ -2,3 +2,6 @@ dist/
 .astro/
 node_modules/
 .DS_Store
+.env
+sanity/node_modules/
+sanity/dist/

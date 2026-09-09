@@ -1,7 +1,7 @@
 # Konverteringsrapport
 
 **Demo** · prototyp v3 · nivå: Aggressiv
-Genererad 9 Sep 2026, 15:45 av Prototyp-feedback.
+Genererad 9 Sep 2026, 16:21 av Prototyp-feedback.
 
 Det här är en **startpunkt**, inte färdig arkitektur. Läs igenom vad som gissades nedan.
 
@@ -34,7 +34,6 @@ Kräver Node >=22.12.0. Kör `npm run build` innan du litar på resultatet – d
 
 Innehållet ligger som en array i frontmatter – ändra texten där i stället för i markupen.
 
-- `rutor` i `Sektion` — 3 poster, fält: `rubrik`, `text`
 - `rutor` i `SektionTjanster` — 4 poster, fält: `rubrik`, `text`
 
 ## Det här gick inte automatiskt
@@ -46,6 +45,8 @@ Innehållet ligger som en array i frontmatter – ändra texten där i stället 
 
 - Inbäddade `<style>` har fått `is:global` eftersom reglerna gällde hela sidan i prototypen. Utan det scopar Astro dem till komponenten.
 - CSS behålls global – inga scoped styles per komponent. Kaskaden i en prototyp går sönder av scoping, så det är ett medvetet val.
+- Studion ligger i mappen `sanity/` som ett eget projekt. Kör `cd sanity && npm install && npx sanity deploy` för att lägga den på sanity.studio.
+- Detaljsidan `src/pages/services/[slug].astro` är en enkel mall – prototypen har ingen design för den, så forma den själv.
 - Med i exporten: en GitHub Actions-workflow som publicerar sajten på GitHub Pages vid varje push till main.
 
 ## Kända begränsningar
