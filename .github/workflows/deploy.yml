@@ -1,7 +1,7 @@
-# Publicerar sajten på GitHub Pages varje gång du pushar.
+# Bygger sajten och publicerar den på GitHub Pages – varje gång du pushar.
 #
 # Slå på det en gång i repot:
-#   Settings → Pages → Build and deployment → Source: GitHub Actions
+#   Settings -> Pages -> Build and deployment -> Source: GitHub Actions
 
 name: Publicera till GitHub Pages
 
@@ -24,7 +24,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: withastro/action@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Installera beroenden
+        run: npm install
+
+      - name: Bygg sajten
+        run: npm run build
+
+      - name: Ladda upp bygget
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./dist
 
   publicera:
     needs: bygg

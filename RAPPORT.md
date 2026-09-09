@@ -1,7 +1,7 @@
 # Konverteringsrapport
 
 **Demo** · prototyp v3 · nivå: Aggressiv
-Genererad 9 Sep 2026, 14:30 av Prototyp-feedback.
+Genererad 9 Sep 2026, 15:45 av Prototyp-feedback.
 
 Det här är en **startpunkt**, inte färdig arkitektur. Läs igenom vad som gissades nedan.
 
