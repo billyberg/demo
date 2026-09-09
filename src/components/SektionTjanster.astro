@@ -1,0 +1,14 @@
+---
+const rutor = [
+  { rubrik: "Webbdesign", text: "Koncept, formspråk och färdiga sidmallar." },
+  { rubrik: "Webbutveckling", text: "Handkodat eller i valfritt CMS." },
+  { rubrik: "Varumärke", text: "Logotyp, typografi och grafisk profil." },
+  { rubrik: "Analys", text: "Mätning, uppföljning och löpande förbättring." },
+];
+---
+
+<section class="sektion" style="padding-top:60px"><h2>Tjänster</h2><p>Vi tar hela kedjan, eller bara den bit du behöver hjälp med.</p><div class="rutor">
+  {rutor.map((post) => (
+    <div class="ruta"><h3>{post.rubrik}</h3><p>{post.text}</p></div>
+  ))}
+</div></section>

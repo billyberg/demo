@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style is:global>:root{color-scheme:light;--bla:#2f5bff;--morkt:#12141a;--svag:#5f6673;--linje:#e8eaef}*{box-sizing:border-box}body{color:var(--morkt);background:#fff;margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,sans-serif;line-height:1.55}.topp{z-index:5;backdrop-filter:blur(10px);border-bottom:1px solid var(--linje);background:#ffffffe6;justify-content:space-between;align-items:center;padding:16px 40px;display:flex;position:sticky;top:0}.logo{letter-spacing:-.02em;font-size:18px;font-weight:700}.meny{gap:26px;font-size:14px;display:flex}.meny a{color:var(--svag);text-decoration:none}.meny a:hover{color:var(--morkt)}.cta{background:var(--bla);border-radius:8px;padding:9px 16px;font-weight:600;color:#fff!important}.hjalte{text-align:center;background:linear-gradient(#f7f8fc,#fff);padding:96px 40px 80px}.hjalte h1{letter-spacing:-.03em;max-width:680px;margin:0 auto 18px;font-size:52px;line-height:1.1}.hjalte p{max-width:520px;color:var(--svag);margin:0 auto 30px;font-size:18px}.knappar{justify-content:center;gap:12px;display:flex}.knapp{border-radius:10px;padding:13px 24px;font-size:15px;font-weight:600;text-decoration:none}.knapp.primar{background:var(--bla);color:#fff}.knapp.sekundar{border:1px solid var(--linje);color:var(--morkt)}.sektion{max-width:1080px;margin:0 auto;padding:80px 40px}.sektion h2{letter-spacing:-.02em;margin:0 0 12px;font-size:34px}.sektion>p{color:var(--svag);max-width:560px;margin:0 0 40px}.rutor{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;display:grid}.ruta{border:1px solid var(--linje);border-radius:14px;padding:26px}.ruta h3{margin:0 0 8px;font-size:18px}.ruta p{color:var(--svag);margin:0;font-size:14.5px}.bild{background:linear-gradient(120deg,#dbe4ff,#f3d9ff);border-radius:16px;width:100%;height:280px;margin-top:40px}.fot{text-align:center;color:var(--svag);border-top:1px solid var(--linje);padding:40px;font-size:14px}@media (width<=640px){.hjalte h1{font-size:34px}.topp{padding:14px 20px}.meny{display:none}.sektion{padding:56px 20px}}.banner{color:#fff;text-align:center;background:#12141a;padding:10px 40px;font-size:13.5px}.hero{text-align:center;background:linear-gradient(#f7f8fc,#fff);padding:96px 40px 80px}.hero__inner{max-width:760px;margin:0 auto}.hero__rubrik{letter-spacing:-.03em;margin:0 auto 18px;font-size:52px;line-height:1.1}.hero__ingress{max-width:520px;color:var(--svag);margin:0 auto 30px;font-size:18px}.btn-primar{box-shadow:0 2px 8px #2f5bff59}@media (width<=640px){.hero__rubrik{font-size:34px}.hero{padding:56px 20px}}
+</style>
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
